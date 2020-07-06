@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(250,250,250);
+}
+.container{
+     display:flex;
+     align-items:center;
+      justify-content: center;
+      flex-direction: column;
+      background-size: cover;
+      background-image: url("./images/covid.png"),
+      -moz-linear-gradient(#EEF, rgba(0,0,0,1)) 300px 50px no-repeat, 
+      -moz-linear-gradient(#EFE, rgba(0,0,0,1)) 0 0 no-repeat; 
+}
+.images{
+    width:375px;
+    margin-top:60px;
+}
+@media(max-width:770px){
+    .container{
+        margin:0 10%;
+    }
+    image{
+        width:100%;
+    }
+}
+@media(max-width:497px){
+    .container{
+        margin:0 10%;
+    }
+    image{
+        width:200px;
+    }
+}
