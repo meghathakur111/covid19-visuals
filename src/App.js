@@ -1,13 +1,13 @@
 
 import React, { Component } from 'react';
 import logo from './logo.svg';
-// import './App.css';
 import styles from './App.module.css';
 import { fetchData } from './api';
 import { Cards, Chart, CountryPicker } from './components';
 import coronaImage from './images/covid_19.png';
-// import GitHubIcon from '@material-ui/icons/GitHub';
-// import { Link } from 'react-router-dom';
+import github from './images/github.png';
+import linkein from './images/linkein.png';
+import { height, style } from '@material-ui/system';
 
 class App extends Component {
   state = {
@@ -42,11 +42,14 @@ class App extends Component {
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
           <Chart data={data} country={country} />
-
-          {/* <Link to="https://github.com/meghathakur111">
-            <GitHubIcon />
-          </Link> */}
-
+          <div className={styles.img}>
+            <a href="https://github.com/meghathakur111/covid19-visuals" className={styles.footer}>
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/megha-thakur-86ab5213a/" >
+              <img src={linkein} className={styles.footer} />
+            </a>
+          </div>
         </div>
       </>
     );
